@@ -7,7 +7,7 @@ export default function Messages() {
     const fetchMessages = async () => {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/contact", {
+      const res = await fetch("https://my-portfolio-fpwq.onrender.com/contact", {
         headers: {
           "Authorization": token
         }

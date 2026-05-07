@@ -14,7 +14,7 @@ export default function Dashboard() {
 
   const fetchProjects = async () => {
     try {
-      const res = await fetch("http://localhost:5000/projects");
+      const res = await fetch("https://my-portfolio-fpwq.onrender.com/projects");
       const data = await res.json();
       setProjects(Array.isArray(data) ? data : []);
     } catch (error) {
@@ -46,7 +46,7 @@ export default function Dashboard() {
     if (image) formData.append("image", image);
 
     try {
-      const res = await fetch("http://localhost:5000/projects", {
+      const res = await fetch("https://my-portfolio-fpwq.onrender.com/projects", {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`, 
@@ -81,7 +81,7 @@ export default function Dashboard() {
     if (!window.confirm("Are you sure you want to delete this project?")) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/projects/${id}`, {
+      const res = await fetch(`https://my-portfolio-fpwq.onrender.com/projects/${id}`, {
         method: "DELETE",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -187,7 +187,7 @@ export default function Dashboard() {
                     <div className="h-40 bg-gray-800 relative">
                       {p.image && (
                         <img
-                          src={`http://localhost:5000/uploads/${p.image}`}
+                          src={`https://my-portfolio-fpwq.onrender.com/uploads/${p.image}`}
                           alt={p.title}
                           className="w-full h-full object-cover opacity-80"
                         />
