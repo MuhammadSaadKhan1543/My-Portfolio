@@ -1,5 +1,5 @@
 import React from "react";
-import bg from "../images/home-bg.png";
+import bg from "./images/home-bg.png";
 import { Link as ScrollLink } from "react-scroll"; 
 
 const Home = () => {
