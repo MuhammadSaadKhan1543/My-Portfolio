@@ -22,7 +22,6 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* HOME */}
         <Route
           path="/"
           element={
@@ -40,10 +39,8 @@ function App() {
           }
         />
 
-        {/* LOGIN */}
         <Route path="/login" element={<Login />} />
 
-        {/* DASHBOARD */}
         <Route
           path="/dashboard"
           element={

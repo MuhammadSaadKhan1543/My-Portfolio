@@ -22,12 +22,10 @@ const Navbar = () => {
    <nav className="sticky top-0 z-50 w-full bg-black/90 backdrop-blur-md border-b border-gray-800 px-6 py-3">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         
-        {/* Left - Logo */}
         <a href="/" className="flex items-center gap-2">
           <img src={logo} alt="logo" className="h-14 w-auto object-contain" />
         </a>
 
-        {/* Center - Desktop Links */}
         <ul className="hidden md:flex items-center gap-8 text-gray-300 font-medium">
           {navItems.map((item) => (
             <li key={item.name} className="relative group cursor-pointer">
@@ -42,7 +40,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Right - Desktop Admin Button */}
         <button 
           onClick={() => window.location.href='./login'} 
           className="hidden md:flex items-center gap-2 border border-purple-500 text-purple-400 px-4 py-1.5 rounded-lg hover:bg-purple-500 hover:text-white transition"
@@ -51,7 +48,6 @@ const Navbar = () => {
           Admin
         </button>
 
-        {/* Mobile Menu Toggle Button */}
         <button 
           className="md:hidden text-gray-300 hover:text-white focus:outline-none" 
           onClick={toggleMenu}
@@ -60,7 +56,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
       <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? "max-h-96 opacity-100 py-4" : "max-h-0 opacity-0"}`}>
         <ul className="flex flex-col gap-4 text-gray-300 font-medium pb-4 border-b border-gray-800">
           {navItems.map((item) => (

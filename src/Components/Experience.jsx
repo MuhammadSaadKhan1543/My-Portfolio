@@ -19,21 +19,13 @@ const Experience = () => {
       description: "Developed and maintained the organization’s website, improving usability and accessibility. Managed updates and deployment to ensure smooth performance and support digital outreach",
       skills: ["React.js", "Bootstrap", "JavaScript", "HTML/CSS"]
     },
-//     {
-//       role: "Freelance Developer",
-//       company: "Self-Employed",
-//       location: "Lahore",
-//       period: "2023 - 2024",
-//       description: "Delivered 12+ successful projects for local and international clients, ranging from portfolio websites to custom e-commerce dashboards.",
-//       skills: ["HTML/CSS", "Vite", "React", "WordPress"]
-//     }
+
   ];
 
   return (
     <section id="experience" className="bg-[#0a0a0c] py-16 md:py-24 px-6 min-h-screen">
       <div className="max-w-4xl mx-auto">
         
-        {/* Header */}
         <div className="mb-16 text-center md:text-left">
           <p className="text-purple-600 font-semibold tracking-widest text-sm mb-4 uppercase">
             Career Journey
@@ -44,7 +36,6 @@ const Experience = () => {
           <div className="h-1 w-20 bg-purple-600 mt-4 rounded-full mx-auto md:mx-0"></div>
         </div>
 
-        {/* Timeline Container */}
         <div className="relative border-l-2 border-gray-800 ml-4 md:ml-6 space-y-12">
           {experiences.map((exp, index) => (
             <div key={index} className="relative pl-8 group">
@@ -66,7 +57,6 @@ const Experience = () => {
                   </span>
                 </div>
 
-                {/* Company and Location */}
                 <div className="flex flex-wrap gap-4 text-gray-400 text-sm mb-6">
                   <span className="flex items-center gap-1.5">
                     <Briefcase size={16} className="text-gray-500" />
@@ -78,12 +68,10 @@ const Experience = () => {
                   </span>
                 </div>
 
-                {/* Description */}
                 <p className="text-gray-400 leading-relaxed mb-6 text-base">
                   {exp.description}
                 </p>
 
-                {/* Skills/Tools Used */}
                 <div className="flex flex-wrap gap-2">
                   {exp.skills.map((skill, i) => (
                     <span 

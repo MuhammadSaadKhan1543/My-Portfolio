@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { PlusCircle, Trash2, Globe, Image as ImageIcon, LayoutDashboard } from "lucide-react";
 
 export default function Dashboard() {
-  // 🔹 State Declarations
   const [projects, setProjects] = useState([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -13,7 +12,6 @@ export default function Dashboard() {
 
   const token = localStorage.getItem("token");
 
-  // 🔹 Fetch projects
   const fetchProjects = async () => {
     try {
       const res = await fetch("http://localhost:5000/projects");
@@ -28,7 +26,6 @@ export default function Dashboard() {
     fetchProjects();
   }, []);
 
-  // 🔹 ADD PROJECT (The single, correct version using FormData)
   const handleAddProject = async () => {
     if (!token) {
       alert("You must be logged in to add a project!");
@@ -52,7 +49,6 @@ export default function Dashboard() {
       const res = await fetch("http://localhost:5000/projects", {
         method: "POST",
         headers: {
-          // Note: Browser sets Content-Type automatically for FormData
           "Authorization": `Bearer ${token}`, 
         },
         body: formData,
@@ -100,7 +96,6 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0c] text-gray-100 flex font-sans">
-      {/* Sidebar Navigation */}
       <aside className="w-64 border-r border-gray-800 bg-[#111113] hidden md:flex flex-col p-6">
         <div className="flex items-center gap-2 mb-10 text-purple-500 font-bold text-xl">
           <LayoutDashboard size={24} />
@@ -114,7 +109,6 @@ export default function Dashboard() {
         </nav>
       </aside>
 
-      {/* Main Content Area */}
       <main className="flex-1 p-8 overflow-y-auto">
         <div className="max-w-6xl mx-auto">
           <header className="mb-10">
@@ -123,7 +117,6 @@ export default function Dashboard() {
           </header>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Left Column: The Form */}
             <section className="lg:col-span-1">
               <div className="bg-[#111113] border border-gray-800 p-6 rounded-2xl sticky top-8">
                 <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
@@ -187,7 +180,6 @@ export default function Dashboard() {
               </div>
             </section>
 
-            {/* Right Column: Project List */}
             <section className="lg:col-span-2">
               <div className="grid md:grid-cols-2 gap-6">
                 {projects.map((p) => (

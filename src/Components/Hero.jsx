@@ -9,12 +9,10 @@ const Home = () => {
   className="relative w-full min-h-screen bg-cover bg-center flex items-center py-20 md:py-0"
   style={{ backgroundImage: `url(${bg})` }}
 >
-  {/* Optional: Add an overlay if the background makes text hard to read on mobile */}
   <div className="absolute inset-0 bg-black/40 md:hidden"></div>
 
   <div className="relative z-10 max-w-7xl mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-center md:text-left">
     
-    {/* LEFT CONTENT */}
     <div className="text-white flex flex-col items-center md:items-start">
       <p className="text-purple-400 mb-2 text-lg font-medium">Hi, I'm</p>
 
@@ -33,10 +31,10 @@ const Home = () => {
         I build scalable, performant and beautiful web applications that solve real problems.
       </p>
 
-      {/* BUTTONS */}
+      
       <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
         
-        {/* View My Work */}
+      
         <ScrollLink
           to="Project" 
           smooth={true} 
@@ -52,7 +50,6 @@ const Home = () => {
           </span>
         </ScrollLink>
 
-        {/* Contact Me */}
         <ScrollLink
           to="contact" 
           smooth={true} 
@@ -70,9 +67,9 @@ const Home = () => {
       </div>
     </div>
 
-    {/* RIGHT CONTENT (Optional placeholder for Image/Animation) */}
+  
     <div className="hidden md:flex justify-center items-center">
-       {/* You can place a Lottie animation or a 3D Canvas here */}
+       
        <div className="w-72 h-72 bg-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
     </div>
   </div>

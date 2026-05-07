@@ -4,7 +4,6 @@ export default function AdminLayout({ children }) {
   return (
     <div className="flex min-h-screen bg-[#0a0a0c] text-white">
 
-      {/* SIDEBAR */}
       <aside className="w-64 bg-[#111113] p-6 border-r border-gray-800">
         <h2 className="text-purple-500 text-xl mb-10">Admin Panel</h2>
 
@@ -14,7 +13,6 @@ export default function AdminLayout({ children }) {
         </nav>
       </aside>
 
-      {/* CONTENT */}
       <main className="flex-1 p-8">
         {children}
       </main>

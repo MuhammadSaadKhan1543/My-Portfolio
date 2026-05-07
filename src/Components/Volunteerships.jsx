@@ -64,7 +64,6 @@ const ImpactPage = () => {
     <section id="impact" className="min-h-screen bg-[#0a0a0c] py-16 md:py-24 px-6">
       <div className="max-w-6xl mx-auto">
         
-        {/* Page Header */}
         <div className="mb-16 text-center">
           <h2 className="text-purple-500 font-medium tracking-widest uppercase text-xs md:text-sm mb-2">
             Beyond the Code
@@ -77,7 +76,6 @@ const ImpactPage = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 md:gap-16">
           
-          {/* VOLUNTEER SECTION */}
           <div>
             <div className="flex items-center gap-3 mb-8">
               <div className="p-2 bg-purple-600/20 rounded-lg text-purple-500">
@@ -109,7 +107,6 @@ const ImpactPage = () => {
             </div>
           </div>
 
-          {/* ACCOMPLISHMENTS SECTION */}
           <div>
             <div className="flex items-center gap-3 mb-8">
               <div className="p-2 bg-purple-600/20 rounded-lg text-purple-500">
@@ -135,15 +132,7 @@ const ImpactPage = () => {
               ))}
             </div>
 
-            {/* LinkedIn Redirection - Aesthetic Touch */}
-            {/* <div className="mt-8 p-6 bg-gradient-to-br from-purple-900/10 to-transparent border border-purple-500/20 rounded-2xl">
-              <p className="text-gray-300 text-sm mb-4">
-                Want to see the full list of my awards and volunteer history?
-              </p>
-              <button className="flex items-center gap-2 text-purple-400 text-sm font-bold hover:text-purple-300 transition-colors">
-                View LinkedIn Activity <ExternalLink size={16} />
-              </button>
-            </div> */}
+         
           </div>
 
         </div>

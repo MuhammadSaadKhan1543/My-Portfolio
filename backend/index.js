@@ -9,14 +9,12 @@ const projectRoutes = require("./routes/projectRoutes");
 
 const app = express();
 
-// MIDDLEWARE
 app.use(cors({
   origin: "http://localhost:5173",
   credentials: true
 }));
 app.use(express.json());
 
-// ROUTES
 app.use("/projects", projectRoutes);
 
 app.post("/login", (req, res) => {
@@ -40,13 +38,10 @@ app.get("/", (req, res) => {
   res.send("API running");
 });
 
-// DB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
-// STATIC
 app.use("/uploads", express.static("uploads"));
 
-// START
 app.listen(5000, () => console.log("Server running on port 5000"));

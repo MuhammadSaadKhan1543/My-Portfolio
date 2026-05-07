@@ -27,40 +27,31 @@ export default function Projects() {
       <div className="h-1 w-16 md:w-20 bg-purple-600 mt-4 rounded-full mx-auto md:mx-0"></div>
     </div>
 
-    {/* Project Grid 
-        - 1 column on mobile
-        - 2 columns on tablets
-        - 3 columns on large screens
-    */}
+    
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
       {projects.map((p) => (
         <div
           key={p._id}
           className="group relative bg-[#111113] border border-gray-800 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-300 flex flex-col h-full"
         >
-          {/* Project Image Container */}
           <div className="relative h-48 sm:h-56 w-full overflow-hidden">
             <img
               src={`http://localhost:5000/uploads/${p.image}`}
               alt={p.title}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            {/* Subtle Overlay */}
             <div className="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-colors duration-300"></div>
           </div>
 
-          {/* Project Content */}
           <div className="p-5 md:p-6 flex flex-col flex-grow">
             <h3 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
               {p.title}
             </h3>
 
-            {/* Description - Responsive text size and line clamping */}
             <p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-6 line-clamp-3">
               {p.description}
             </p>
 
-            {/* Tech Stack Tags - mt-auto pushes this to the bottom */}
             <div className="flex flex-wrap gap-2 mb-6 mt-auto">
               {Array.isArray(p.techStack) &&
                 p.techStack.map((tech, index) => (
@@ -73,7 +64,6 @@ export default function Projects() {
                 ))}
             </div>
 
-            {/* Action Links */}
             <div className="flex items-center justify-between border-t border-gray-800 pt-5">
               <a
                 href={p.githubLink}
@@ -98,7 +88,6 @@ export default function Projects() {
       ))}
     </div>
 
-    {/* Empty State */}
     {projects.length === 0 && (
       <div className="text-center py-20">
         <p className="text-gray-500 text-lg italic">

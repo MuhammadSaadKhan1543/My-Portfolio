@@ -34,25 +34,19 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-[#0a0a0c] text-gray-100 flex flex-col justify-center items-center px-4 font-sans">
       
-      {/* Decorative background glow (subtle nod to the circle behind Saad) */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-purple-900/10 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Login Card Container with subtle border */}
       <div className="relative w-full max-w-md bg-[#111113] p-8 rounded-2xl border border-gray-800 shadow-2xl">
         
-        {/* Header Section */}
         <div className="mb-10 text-center">
-          {/* Optional: Add a small lock icon or logo here */}
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">
             Admin <span className="text-purple-500">Portal</span>
           </h1>
           <p className="text-gray-400">Please sign in to access the dashboard.</p>
         </div>
 
-        {/* The Form */}
         <form onSubmit={handleLogin} className="space-y-6">
           
-          {/* Username Field */}
           <div className="space-y-2">
             <label htmlFor="username" className="text-sm font-medium text-gray-300">
               Username
@@ -67,7 +61,6 @@ export default function Login() {
             />
           </div>
 
-          {/* Password Field */}
           <div className="space-y-2">
             <label htmlFor="password" className="text-sm font-medium text-gray-300">
               Password
@@ -82,14 +75,12 @@ export default function Login() {
             />
           </div>
 
-          {/* Error Message Display */}
           {error && (
             <div className="bg-red-950 border border-red-700 text-red-200 p-3 rounded-lg text-sm text-center font-medium">
               ⚠️ {error}
             </div>
           )}
 
-          {/* Submit Button - Matched to your "View My Work" button */}
           <div className="pt-2">
             <button
               type="submit"
@@ -111,7 +102,6 @@ export default function Login() {
           </div>
         </form>
 
-        {/* Optional Footer Link */}
         <div className="mt-8 text-center text-sm text-gray-500">
           <a href="/" className="hover:text-purple-400 transition">
             &larr; Back to homepage
