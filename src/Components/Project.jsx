@@ -36,7 +36,7 @@ export default function Projects() {
         >
           <div className="relative h-48 sm:h-56 w-full overflow-hidden">
             <img
-              src={`http://localhost:5000/uploads/${p.image}`}
+              src={`https://my-portfolio-fpwq.onrender.com/uploads/${p.image}`}
               alt={p.title}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
