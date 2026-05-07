@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/logo.png";
+import logo from "../assets/logo.png";
 import { Lock , Menu , X} from 'lucide-react';
 import { NavLink, Link } from 'react-router-dom';
 import { useState } from "react";
