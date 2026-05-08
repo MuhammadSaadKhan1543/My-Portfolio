@@ -5,7 +5,7 @@ export default function Projects() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("https://my-portfolio-fpwq.onrender.com//projects")
+    fetch("https://my-portfolio-fpwq.onrender.com/projects")
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);
