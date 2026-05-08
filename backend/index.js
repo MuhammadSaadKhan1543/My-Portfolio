@@ -8,9 +8,11 @@ const jwt = require("jsonwebtoken");
 const projectRoutes = require("./routes/projectRoutes");
 
 const app = express();
-
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: [
+    "http://localhost:5173",
+    "https://muhammad-saad-khan.vercel.app"
+  ],
   credentials: true
 }));
 app.use(express.json());
